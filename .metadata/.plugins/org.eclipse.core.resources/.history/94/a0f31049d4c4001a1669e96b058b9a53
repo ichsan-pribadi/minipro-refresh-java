@@ -1,0 +1,9 @@
+package com.xample.demo.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.models.ModelPasien;
+
+public interface RepoPasien extends JpaRepository<ModelPasien, Long>{
+
+}

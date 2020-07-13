@@ -1,0 +1,124 @@
+package com.example.demo.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="x_faktor_resiko")
+public class ModelFaktorResiko {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id", length = 11)
+    private Integer id;
+	
+	@Column(name = "faktor1",length = 5)
+    private String faktor1;
+	
+	@Column(name = "kota_terjangkit",length = 50)
+    private String kota_terjangkit;
+	
+	@Column(name = "faktor2a",length = 5)
+    private String faktor2a;
+	
+	
+	@Column(name = "faktor2b",length = 5)
+    private String faktor2b;
+	
+	@Column(name = "faktor2c",length = 5)
+    private String faktor2c;
+	
+	@Column(name = "faktor2d",length = 5)
+    private String faktor2d;
+
+	public ModelFaktorResiko(Integer id, String faktor1, String kota_terjangkit, String faktor2a, String faktor2b,
+			String faktor2c, String faktor2d) {
+		super();
+		this.id = id;
+		this.faktor1 = faktor1;
+		this.kota_terjangkit = kota_terjangkit;
+		this.faktor2a = faktor2a;
+		this.faktor2b = faktor2b;
+		this.faktor2c = faktor2c;
+		this.faktor2d = faktor2d;
+	}
+
+	public ModelFaktorResiko(String faktor1, String kota_terjangkit, String faktor2a, String faktor2b, String faktor2c,
+			String faktor2d) {
+		super();
+		this.faktor1 = faktor1;
+		this.kota_terjangkit = kota_terjangkit;
+		this.faktor2a = faktor2a;
+		this.faktor2b = faktor2b;
+		this.faktor2c = faktor2c;
+		this.faktor2d = faktor2d;
+	}
+
+	public ModelFaktorResiko() {
+		super();
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getFaktor1() {
+		return faktor1;
+	}
+
+	public void setFaktor1(String faktor1) {
+		this.faktor1 = faktor1;
+	}
+
+	public String getKota_terjangkit() {
+		return kota_terjangkit;
+	}
+
+	public void setKota_terjangkit(String kota_terjangkit) {
+		this.kota_terjangkit = kota_terjangkit;
+	}
+
+	public String getFaktor2a() {
+		return faktor2a;
+	}
+
+	public void setFaktor2a(String faktor2a) {
+		this.faktor2a = faktor2a;
+	}
+
+	public String getFaktor2b() {
+		return faktor2b;
+	}
+
+	public void setFaktor2b(String faktor2b) {
+		this.faktor2b = faktor2b;
+	}
+
+	public String getFaktor2c() {
+		return faktor2c;
+	}
+
+	public void setFaktor2c(String faktor2c) {
+		this.faktor2c = faktor2c;
+	}
+
+	public String getFaktor2d() {
+		return faktor2d;
+	}
+
+	public void setFaktor2d(String faktor2d) {
+		this.faktor2d = faktor2d;
+	}
+	
+	
+	
+
+}

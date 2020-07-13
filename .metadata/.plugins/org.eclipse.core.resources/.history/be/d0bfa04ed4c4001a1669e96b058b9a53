@@ -1,0 +1,19 @@
+package com.xample.demo.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.example.demo.models.ModelGejala;
+
+public interface RepoGejala extends JpaRepository<ModelGejala, Long>{
+	
+	@Query("select p.kode, p.name ,p.jenis_kelamin , p.alamat "
+			+ "  from ModelGejala p where p.kode=?1")
+	List<ModelGejala> findpasienByKode(String kode);
+
+	
+	
+
+}

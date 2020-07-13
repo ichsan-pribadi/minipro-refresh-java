@@ -1,0 +1,29 @@
+package com.example.demo.service.impl;
+
+import java.util.List;
+
+import org.apache.tomcat.jni.PasswordCallback;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.ModelGejala;
+import com.example.demo.models.ModelPasien;
+import com.example.demo.service.ServicePasien;
+import com.xample.demo.repositories.RepoPasien;
+
+@Service
+public class PaseienServiceImpl implements ServicePasien{
+	
+	@Autowired
+	private RepoPasien RP;
+
+	@Override
+	public List<ModelPasien> findpasienByKode(String kode) {
+		// TODO Auto-generated method stub
+		return RP.findpasienByKode(kode);
+	}
+
+
+	
+
+}

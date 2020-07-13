@@ -1,0 +1,19 @@
+package com.xample.demo.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.models.ModelPasien;
+
+@Repository
+public interface RepoPasien extends JpaRepository<ModelPasien, Long>{
+
+	
+	@Query("select p.kode, p.name ,p.jenis_kelamin , p.alamat "
+			+ "  from ModelPasien p where p.kode=?1")
+	List<ModelPasien> findpasienByKode(String kode);
+
+}

@@ -1,0 +1,81 @@
+package com.example.demo.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="x_hasil")
+public class ModelHasil {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id", length = 11)
+    private Integer id;
+	
+	@Column(name = "id_pasien",length = 11)
+    private Integer id_pasien;
+	
+	@Column(name = "id_gejala",length = 11)
+    private Integer id_gejala;
+	
+	@Column(name = "id_faktor_resiko",length = 11)
+    private Integer id_faktor_resiko;
+
+	public ModelHasil(Integer id, Integer id_pasien, Integer id_gejala, Integer id_faktor_resiko) {
+		super();
+		this.id = id;
+		this.id_pasien = id_pasien;
+		this.id_gejala = id_gejala;
+		this.id_faktor_resiko = id_faktor_resiko;
+	}
+
+	public ModelHasil() {
+		super();
+	}
+
+	public ModelHasil(Integer id_pasien, Integer id_gejala, Integer id_faktor_resiko) {
+		super();
+		this.id_pasien = id_pasien;
+		this.id_gejala = id_gejala;
+		this.id_faktor_resiko = id_faktor_resiko;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getId_pasien() {
+		return id_pasien;
+	}
+
+	public void setId_pasien(Integer id_pasien) {
+		this.id_pasien = id_pasien;
+	}
+
+	public Integer getId_gejala() {
+		return id_gejala;
+	}
+
+	public void setId_gejala(Integer id_gejala) {
+		this.id_gejala = id_gejala;
+	}
+
+	public Integer getId_faktor_resiko() {
+		return id_faktor_resiko;
+	}
+
+	public void setId_faktor_resiko(Integer id_faktor_resiko) {
+		this.id_faktor_resiko = id_faktor_resiko;
+	}
+	
+	
+
+}

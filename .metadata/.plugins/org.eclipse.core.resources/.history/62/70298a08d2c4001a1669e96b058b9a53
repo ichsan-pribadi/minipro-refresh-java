@@ -1,0 +1,82 @@
+package com.example.demo.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="x_gejala")
+public class ModelGejala {
+	
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id", length = 11)
+    private Integer id;
+	
+	@Column(name = "gejala1",length = 5)
+    private String gejala1;
+	
+	@Column(name = "gejala2",length = 5)
+    private String gejala2;
+	
+	@Column(name = "gejala3",length = 5)
+    private String gejala3;
+
+	public ModelGejala(Integer id, String gejala1, String gejala2, String gejala3) {
+		super();
+		this.id = id;
+		this.gejala1 = gejala1;
+		this.gejala2 = gejala2;
+		this.gejala3 = gejala3;
+	}
+
+	public ModelGejala(String gejala1, String gejala2, String gejala3) {
+		super();
+		this.gejala1 = gejala1;
+		this.gejala2 = gejala2;
+		this.gejala3 = gejala3;
+	}
+
+	public ModelGejala() {
+		super();
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getGejala1() {
+		return gejala1;
+	}
+
+	public void setGejala1(String gejala1) {
+		this.gejala1 = gejala1;
+	}
+
+	public String getGejala2() {
+		return gejala2;
+	}
+
+	public void setGejala2(String gejala2) {
+		this.gejala2 = gejala2;
+	}
+
+	public String getGejala3() {
+		return gejala3;
+	}
+
+	public void setGejala3(String gejala3) {
+		this.gejala3 = gejala3;
+	}
+	
+	
+
+}
